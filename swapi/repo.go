@@ -20,7 +20,7 @@ type (
 	PersonGetterFunc func(ctx context.Context, id string) (*Person, error)
 )
 
-func (f PersonGetterFunc) Get(ctx context.Context, id string) (*Person, error) {
+func (f PersonGetterFunc) GetPerson(ctx context.Context, id string) (*Person, error) {
 	return f(ctx, id)
 }
 
@@ -77,6 +77,8 @@ func (s *swapi) GetPerson(ctx context.Context, id string) (*Person, error) {
 	if err != nil {
 		return nil, err
 	}
+	// b, err := ioutil.ReadAll(res.Body)
+	// log.Print(string(b))
 	var p Person
 	// This streams the response body into p, if we use ioutil.ReadAll then it
 	// allocates memory to read in the entire response before copying

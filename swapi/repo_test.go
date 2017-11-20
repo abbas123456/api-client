@@ -10,8 +10,8 @@ import (
 	"testing"
 
 	"github.com/kylelemons/godebug/pretty"
-	chttp "github.com/kynrai/scratch/common/http"
-	"github.com/kynrai/scratch/swapi"
+	chttp "github.com/kynrai/api-client/common/http"
+	"github.com/kynrai/api-client/swapi"
 )
 
 // We use _test package so that we can simulate how external packages would see the API of this package
